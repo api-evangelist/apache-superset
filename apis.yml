@@ -7,11 +7,11 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Data Visualization
+  - Analytics
   - BI
   - Dashboard
+  - Data Visualization
   - SQL
-  - Analytics
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -24,9 +24,9 @@ apis:
       The Superset REST API provides endpoints for managing charts, dashboards, datasets, databases, queries (SQL Lab), security/permissions, embedded dashboards, and report scheduling.
     humanURL: https://superset.apache.org/docs/api/
     tags:
-      - REST
-      - Dashboard
       - Charts
+      - Dashboard
+      - REST
       - SQL
     properties:
       - type: Documentation
