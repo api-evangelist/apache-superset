@@ -44,6 +44,8 @@ apis:
         url: https://superset.apache.org/developer-docs/api
       - type: APIReference
         url: https://superset.apache.org/docs/api
+      - url: openapi/apache-superset-openapi.yml
+        type: OpenAPI
 common:
   - type: GitHubRepository
     url: https://github.com/apache/superset

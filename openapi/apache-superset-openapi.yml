@@ -1,0 +1,639 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST API
+  version: "1.0"
+  description: >-
+    Minimal OpenAPI for the Apache Superset REST API covering authentication,
+    dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes,
+    annotations, security (users/roles/permissions), reports, and assets.
+servers:
+  - url: http://localhost:8088
+    description: Superset
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08
+paths:
+  /api/v1/security/csrf_token/:
+    get:
+      summary: Get CSRF token
+      responses:
+        "200":
+          description: OK
+  /api/v1/security/guest_token/:
+    post:
+      summary: Issue a guest token
+      responses:
+        "200":
+          description: OK
+  /api/v1/security/login:
+    post:
+      summary: Log in and obtain access token
+      responses:
+        "200":
+          description: OK
+  /api/v1/security/refresh:
+    post:
+      summary: Refresh access token
+      responses:
+        "200":
+          description: OK
+  /api/v1/dashboard/:
+    get:
+      summary: List dashboards
+      responses:
+        "200": { description: OK }
+    post:
+      summary: Create dashboard
+      responses:
+        "201": { description: Created }
+    delete:
+      summary: Bulk delete dashboards
+      responses:
+        "200": { description: OK }
+  /api/v1/dashboard/_info:
+    get:
+      summary: Dashboard schema info
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{id_or_slug}:
+    get:
+      summary: Get dashboard
+      parameters:
+        - { name: id_or_slug, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{pk}:
+    put:
+      summary: Update dashboard
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete dashboard
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{id_or_slug}/charts:
+    get:
+      summary: List charts of a dashboard
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{id_or_slug}/datasets:
+    get:
+      summary: List datasets of a dashboard
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{id_or_slug}/copy/:
+    post:
+      summary: Copy dashboard
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{id_or_slug}/embedded:
+    get:
+      summary: Get embedded dashboard config
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create embedded dashboard config
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "201": { description: Created } }
+    put:
+      summary: Update embedded dashboard config
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete embedded dashboard config
+      parameters: [ { name: id_or_slug, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/export/:
+    get:
+      summary: Export dashboards
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/import/:
+    post:
+      summary: Import dashboards
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/favorite_status/:
+    get:
+      summary: Dashboard favorite status
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{pk}/favorites/:
+    post:
+      summary: Favorite dashboard
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Unfavorite dashboard
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{pk}/permalink:
+    post:
+      summary: Create dashboard permalink
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "201": { description: Created } }
+  /api/v1/dashboard/permalink/{key}:
+    get:
+      summary: Resolve dashboard permalink
+      parameters: [ { name: key, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dashboard/{pk}/filter_state:
+    post:
+      summary: Create filter state
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "201": { description: Created } }
+  /api/v1/dashboard/{pk}/filter_state/{key}:
+    get:
+      summary: Get filter state
+      parameters:
+        - { name: pk, in: path, required: true, schema: { type: string } }
+        - { name: key, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update filter state
+      parameters:
+        - { name: pk, in: path, required: true, schema: { type: string } }
+        - { name: key, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete filter state
+      parameters:
+        - { name: pk, in: path, required: true, schema: { type: string } }
+        - { name: key, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+  /api/v1/chart/:
+    get:
+      summary: List charts
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create chart
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete charts
+      responses: { "200": { description: OK } }
+  /api/v1/chart/_info:
+    get:
+      summary: Chart schema info
+      responses: { "200": { description: OK } }
+  /api/v1/chart/{id_or_uuid}:
+    get:
+      summary: Get chart
+      parameters: [ { name: id_or_uuid, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/chart/{pk}:
+    put:
+      summary: Update chart
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete chart
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/chart/{pk}/data/:
+    get:
+      summary: Get chart data
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/chart/data:
+    post:
+      summary: Run chart data query
+      responses: { "200": { description: OK } }
+  /api/v1/chart/data/{cache_key}:
+    get:
+      summary: Fetch cached chart data
+      parameters: [ { name: cache_key, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/chart/export/:
+    get:
+      summary: Export charts
+      responses: { "200": { description: OK } }
+  /api/v1/chart/import/:
+    post:
+      summary: Import charts
+      responses: { "200": { description: OK } }
+  /api/v1/chart/{pk}/favorites/:
+    post:
+      summary: Favorite chart
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Unfavorite chart
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/:
+    get:
+      summary: List datasets
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create dataset
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete datasets
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/_info:
+    get:
+      summary: Dataset schema info
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/{id_or_uuid}:
+    get:
+      summary: Get dataset
+      parameters: [ { name: id_or_uuid, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/{pk}:
+    put:
+      summary: Update dataset
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete dataset
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/{pk}/refresh:
+    put:
+      summary: Refresh dataset metadata
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/duplicate:
+    post:
+      summary: Duplicate dataset
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/export/:
+    get:
+      summary: Export datasets
+      responses: { "200": { description: OK } }
+  /api/v1/dataset/import/:
+    post:
+      summary: Import datasets
+      responses: { "200": { description: OK } }
+  /api/v1/database/:
+    get:
+      summary: List databases
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create database
+      responses: { "201": { description: Created } }
+  /api/v1/database/{pk}:
+    get:
+      summary: Get database
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update database
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete database
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/database/{pk}/schemas/:
+    get:
+      summary: List database schemas
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/database/{pk}/tables/:
+    get:
+      summary: List database tables
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/database/test_connection/:
+    post:
+      summary: Test database connection
+      responses: { "200": { description: OK } }
+  /api/v1/database/available/:
+    get:
+      summary: Available database engines
+      responses: { "200": { description: OK } }
+  /api/v1/database/import/:
+    post:
+      summary: Import databases
+      responses: { "200": { description: OK } }
+  /api/v1/database/export/:
+    get:
+      summary: Export databases
+      responses: { "200": { description: OK } }
+  /api/v1/sqllab/:
+    get:
+      summary: SQL Lab home info
+      responses: { "200": { description: OK } }
+  /api/v1/sqllab/execute/:
+    post:
+      summary: Execute SQL
+      responses: { "200": { description: OK } }
+  /api/v1/sqllab/estimate/:
+    post:
+      summary: Estimate SQL cost
+      responses: { "200": { description: OK } }
+  /api/v1/sqllab/format_sql/:
+    post:
+      summary: Format SQL
+      responses: { "200": { description: OK } }
+  /api/v1/sqllab/results/:
+    get:
+      summary: Fetch SQL results
+      responses: { "200": { description: OK } }
+  /api/v1/sqllab/export/{client_id}/:
+    get:
+      summary: Export SQL Lab results
+      parameters: [ { name: client_id, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/query/:
+    get:
+      summary: List queries
+      responses: { "200": { description: OK } }
+  /api/v1/query/{pk}:
+    get:
+      summary: Get query
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/query/stop:
+    post:
+      summary: Stop query
+      responses: { "200": { description: OK } }
+  /api/v1/saved_query/:
+    get:
+      summary: List saved queries
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create saved query
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete saved queries
+      responses: { "200": { description: OK } }
+  /api/v1/saved_query/{pk}:
+    get:
+      summary: Get saved query
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update saved query
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete saved query
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/tag/:
+    get:
+      summary: List tags
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create tag
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete tags
+      responses: { "200": { description: OK } }
+  /api/v1/tag/{pk}:
+    get:
+      summary: Get tag
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update tag
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete tag
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/tag/bulk_create:
+    post:
+      summary: Bulk create tags
+      responses: { "200": { description: OK } }
+  /api/v1/annotation_layer/:
+    get:
+      summary: List annotation layers
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create annotation layer
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete annotation layers
+      responses: { "200": { description: OK } }
+  /api/v1/annotation_layer/{pk}:
+    get:
+      summary: Get annotation layer
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update annotation layer
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete annotation layer
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/annotation_layer/{pk}/annotation/:
+    get:
+      summary: List annotations
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create annotation
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete annotations
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/annotation_layer/{pk}/annotation/{annotation_id}:
+    get:
+      summary: Get annotation
+      parameters:
+        - { name: pk, in: path, required: true, schema: { type: string } }
+        - { name: annotation_id, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update annotation
+      parameters:
+        - { name: pk, in: path, required: true, schema: { type: string } }
+        - { name: annotation_id, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete annotation
+      parameters:
+        - { name: pk, in: path, required: true, schema: { type: string } }
+        - { name: annotation_id, in: path, required: true, schema: { type: string } }
+      responses: { "200": { description: OK } }
+  /api/v1/css_template/:
+    get:
+      summary: List CSS templates
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create CSS template
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete CSS templates
+      responses: { "200": { description: OK } }
+  /api/v1/css_template/{pk}:
+    get:
+      summary: Get CSS template
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update CSS template
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete CSS template
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/report/:
+    get:
+      summary: List report schedules
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create report schedule
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete report schedules
+      responses: { "200": { description: OK } }
+  /api/v1/report/{pk}:
+    get:
+      summary: Get report schedule
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update report schedule
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete report schedule
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/security/roles/:
+    get:
+      summary: List roles
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create role
+      responses: { "201": { description: Created } }
+  /api/v1/security/roles/{pk}:
+    get:
+      summary: Get role
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update role
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete role
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/security/users/:
+    get:
+      summary: List users
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create user
+      responses: { "201": { description: Created } }
+  /api/v1/security/users/{pk}:
+    get:
+      summary: Get user
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update user
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete user
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/security/permissions/:
+    get:
+      summary: List permissions
+      responses: { "200": { description: OK } }
+  /api/v1/security/groups/:
+    get:
+      summary: List security groups
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create security group
+      responses: { "201": { description: Created } }
+  /api/v1/security/groups/{pk}:
+    get:
+      summary: Get security group
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update security group
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete security group
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/theme/:
+    get:
+      summary: List themes
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create theme
+      responses: { "201": { description: Created } }
+    delete:
+      summary: Bulk delete themes
+      responses: { "200": { description: OK } }
+  /api/v1/theme/{pk}:
+    get:
+      summary: Get theme
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update theme
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+    delete:
+      summary: Delete theme
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/log/:
+    get:
+      summary: List logs
+      responses: { "200": { description: OK } }
+    post:
+      summary: Create log entry
+      responses: { "201": { description: Created } }
+  /api/v1/log/{pk}:
+    get:
+      summary: Get log entry
+      parameters: [ { name: pk, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+  /api/v1/me/:
+    get:
+      summary: Current user info
+      responses: { "200": { description: OK } }
+    put:
+      summary: Update current user
+      responses: { "200": { description: OK } }
+  /api/v1/me/roles/:
+    get:
+      summary: Current user roles
+      responses: { "200": { description: OK } }
+  /api/v1/menu/:
+    get:
+      summary: Application menu
+      responses: { "200": { description: OK } }
+  /api/v1/available_domains/:
+    get:
+      summary: Available domains
+      responses: { "200": { description: OK } }
+  /api/v1/async_event/:
+    get:
+      summary: Async events
+      responses: { "200": { description: OK } }
+  /api/v1/assets/export/:
+    get:
+      summary: Export assets bundle
+      responses: { "200": { description: OK } }
+  /api/v1/assets/import/:
+    post:
+      summary: Import assets bundle
+      responses: { "200": { description: OK } }
+  /api/v1/cachekey/invalidate:
+    post:
+      summary: Invalidate cache keys
+      responses: { "200": { description: OK } }
+  /api/v1/embedded_dashboard/{uuid}:
+    get:
+      summary: Get embedded dashboard
+      parameters: [ { name: uuid, in: path, required: true, schema: { type: string } } ]
+      responses: { "200": { description: OK } }
+components:
+  schemas:
+    GenericObject:
+      type: object
