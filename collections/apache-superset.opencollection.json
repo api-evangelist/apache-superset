@@ -1,0 +1,2143 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get CSRF token",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/csrf_token/"
+      },
+      "docs": "Get CSRF token"
+    },
+    {
+      "info": {
+        "name": "Issue a guest token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/security/guest_token/"
+      },
+      "docs": "Issue a guest token"
+    },
+    {
+      "info": {
+        "name": "Log in and obtain access token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/security/login"
+      },
+      "docs": "Log in and obtain access token"
+    },
+    {
+      "info": {
+        "name": "Refresh access token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/security/refresh"
+      },
+      "docs": "Refresh access token"
+    },
+    {
+      "info": {
+        "name": "List dashboards",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/"
+      },
+      "docs": "List dashboards"
+    },
+    {
+      "info": {
+        "name": "Create dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/"
+      },
+      "docs": "Create dashboard"
+    },
+    {
+      "info": {
+        "name": "Bulk delete dashboards",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dashboard/"
+      },
+      "docs": "Bulk delete dashboards"
+    },
+    {
+      "info": {
+        "name": "Dashboard schema info",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/_info"
+      },
+      "docs": "Dashboard schema info"
+    },
+    {
+      "info": {
+        "name": "Get dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get dashboard"
+    },
+    {
+      "info": {
+        "name": "Update dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update dashboard"
+    },
+    {
+      "info": {
+        "name": "Delete dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete dashboard"
+    },
+    {
+      "info": {
+        "name": "List charts of a dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/charts",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List charts of a dashboard"
+    },
+    {
+      "info": {
+        "name": "List datasets of a dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/datasets",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List datasets of a dashboard"
+    },
+    {
+      "info": {
+        "name": "Copy dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/copy/",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Copy dashboard"
+    },
+    {
+      "info": {
+        "name": "Get embedded dashboard config",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get embedded dashboard config"
+    },
+    {
+      "info": {
+        "name": "Create embedded dashboard config",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create embedded dashboard config"
+    },
+    {
+      "info": {
+        "name": "Update embedded dashboard config",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update embedded dashboard config"
+    },
+    {
+      "info": {
+        "name": "Delete embedded dashboard config",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+        "params": [
+          {
+            "name": "id_or_slug",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete embedded dashboard config"
+    },
+    {
+      "info": {
+        "name": "Export dashboards",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/export/"
+      },
+      "docs": "Export dashboards"
+    },
+    {
+      "info": {
+        "name": "Import dashboards",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/import/"
+      },
+      "docs": "Import dashboards"
+    },
+    {
+      "info": {
+        "name": "Dashboard favorite status",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/favorite_status/"
+      },
+      "docs": "Dashboard favorite status"
+    },
+    {
+      "info": {
+        "name": "Favorite dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/favorites/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Favorite dashboard"
+    },
+    {
+      "info": {
+        "name": "Unfavorite dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/favorites/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Unfavorite dashboard"
+    },
+    {
+      "info": {
+        "name": "Create dashboard permalink",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/permalink",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create dashboard permalink"
+    },
+    {
+      "info": {
+        "name": "Resolve dashboard permalink",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/permalink/:key",
+        "params": [
+          {
+            "name": "key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Resolve dashboard permalink"
+    },
+    {
+      "info": {
+        "name": "Create filter state",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create filter state"
+    },
+    {
+      "info": {
+        "name": "Get filter state",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state/:key",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get filter state"
+    },
+    {
+      "info": {
+        "name": "Update filter state",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state/:key",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update filter state"
+    },
+    {
+      "info": {
+        "name": "Delete filter state",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state/:key",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete filter state"
+    },
+    {
+      "info": {
+        "name": "List charts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/chart/"
+      },
+      "docs": "List charts"
+    },
+    {
+      "info": {
+        "name": "Create chart",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/chart/"
+      },
+      "docs": "Create chart"
+    },
+    {
+      "info": {
+        "name": "Bulk delete charts",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/chart/"
+      },
+      "docs": "Bulk delete charts"
+    },
+    {
+      "info": {
+        "name": "Chart schema info",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/chart/_info"
+      },
+      "docs": "Chart schema info"
+    },
+    {
+      "info": {
+        "name": "Get chart",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/chart/:id_or_uuid",
+        "params": [
+          {
+            "name": "id_or_uuid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get chart"
+    },
+    {
+      "info": {
+        "name": "Update chart",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/chart/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update chart"
+    },
+    {
+      "info": {
+        "name": "Delete chart",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/chart/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete chart"
+    },
+    {
+      "info": {
+        "name": "Get chart data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/chart/:pk/data/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get chart data"
+    },
+    {
+      "info": {
+        "name": "Run chart data query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/chart/data"
+      },
+      "docs": "Run chart data query"
+    },
+    {
+      "info": {
+        "name": "Fetch cached chart data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/chart/data/:cache_key",
+        "params": [
+          {
+            "name": "cache_key",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Fetch cached chart data"
+    },
+    {
+      "info": {
+        "name": "Export charts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/chart/export/"
+      },
+      "docs": "Export charts"
+    },
+    {
+      "info": {
+        "name": "Import charts",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/chart/import/"
+      },
+      "docs": "Import charts"
+    },
+    {
+      "info": {
+        "name": "Favorite chart",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/chart/:pk/favorites/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Favorite chart"
+    },
+    {
+      "info": {
+        "name": "Unfavorite chart",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/chart/:pk/favorites/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Unfavorite chart"
+    },
+    {
+      "info": {
+        "name": "List datasets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dataset/"
+      },
+      "docs": "List datasets"
+    },
+    {
+      "info": {
+        "name": "Create dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dataset/"
+      },
+      "docs": "Create dataset"
+    },
+    {
+      "info": {
+        "name": "Bulk delete datasets",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dataset/"
+      },
+      "docs": "Bulk delete datasets"
+    },
+    {
+      "info": {
+        "name": "Dataset schema info",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dataset/_info"
+      },
+      "docs": "Dataset schema info"
+    },
+    {
+      "info": {
+        "name": "Get dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dataset/:id_or_uuid",
+        "params": [
+          {
+            "name": "id_or_uuid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get dataset"
+    },
+    {
+      "info": {
+        "name": "Update dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/dataset/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update dataset"
+    },
+    {
+      "info": {
+        "name": "Delete dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/dataset/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete dataset"
+    },
+    {
+      "info": {
+        "name": "Refresh dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/dataset/:pk/refresh",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Refresh dataset metadata"
+    },
+    {
+      "info": {
+        "name": "Duplicate dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dataset/duplicate"
+      },
+      "docs": "Duplicate dataset"
+    },
+    {
+      "info": {
+        "name": "Export datasets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/dataset/export/"
+      },
+      "docs": "Export datasets"
+    },
+    {
+      "info": {
+        "name": "Import datasets",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/dataset/import/"
+      },
+      "docs": "Import datasets"
+    },
+    {
+      "info": {
+        "name": "List databases",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/database/"
+      },
+      "docs": "List databases"
+    },
+    {
+      "info": {
+        "name": "Create database",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/database/"
+      },
+      "docs": "Create database"
+    },
+    {
+      "info": {
+        "name": "Get database",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/database/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get database"
+    },
+    {
+      "info": {
+        "name": "Update database",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/database/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update database"
+    },
+    {
+      "info": {
+        "name": "Delete database",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/database/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete database"
+    },
+    {
+      "info": {
+        "name": "List database schemas",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/database/:pk/schemas/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List database schemas"
+    },
+    {
+      "info": {
+        "name": "List database tables",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/database/:pk/tables/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List database tables"
+    },
+    {
+      "info": {
+        "name": "Test database connection",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/database/test_connection/"
+      },
+      "docs": "Test database connection"
+    },
+    {
+      "info": {
+        "name": "Available database engines",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/database/available/"
+      },
+      "docs": "Available database engines"
+    },
+    {
+      "info": {
+        "name": "Import databases",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/database/import/"
+      },
+      "docs": "Import databases"
+    },
+    {
+      "info": {
+        "name": "Export databases",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/database/export/"
+      },
+      "docs": "Export databases"
+    },
+    {
+      "info": {
+        "name": "SQL Lab home info",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/sqllab/"
+      },
+      "docs": "SQL Lab home info"
+    },
+    {
+      "info": {
+        "name": "Execute SQL",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/sqllab/execute/"
+      },
+      "docs": "Execute SQL"
+    },
+    {
+      "info": {
+        "name": "Estimate SQL cost",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/sqllab/estimate/"
+      },
+      "docs": "Estimate SQL cost"
+    },
+    {
+      "info": {
+        "name": "Format SQL",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/sqllab/format_sql/"
+      },
+      "docs": "Format SQL"
+    },
+    {
+      "info": {
+        "name": "Fetch SQL results",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/sqllab/results/"
+      },
+      "docs": "Fetch SQL results"
+    },
+    {
+      "info": {
+        "name": "Export SQL Lab results",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/sqllab/export/:client_id/",
+        "params": [
+          {
+            "name": "client_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Export SQL Lab results"
+    },
+    {
+      "info": {
+        "name": "List queries",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/query/"
+      },
+      "docs": "List queries"
+    },
+    {
+      "info": {
+        "name": "Get query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/query/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get query"
+    },
+    {
+      "info": {
+        "name": "Stop query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/query/stop"
+      },
+      "docs": "Stop query"
+    },
+    {
+      "info": {
+        "name": "List saved queries",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/saved_query/"
+      },
+      "docs": "List saved queries"
+    },
+    {
+      "info": {
+        "name": "Create saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/saved_query/"
+      },
+      "docs": "Create saved query"
+    },
+    {
+      "info": {
+        "name": "Bulk delete saved queries",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/saved_query/"
+      },
+      "docs": "Bulk delete saved queries"
+    },
+    {
+      "info": {
+        "name": "Get saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/saved_query/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get saved query"
+    },
+    {
+      "info": {
+        "name": "Update saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/saved_query/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update saved query"
+    },
+    {
+      "info": {
+        "name": "Delete saved query",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/saved_query/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete saved query"
+    },
+    {
+      "info": {
+        "name": "List tags",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/tag/"
+      },
+      "docs": "List tags"
+    },
+    {
+      "info": {
+        "name": "Create tag",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/tag/"
+      },
+      "docs": "Create tag"
+    },
+    {
+      "info": {
+        "name": "Bulk delete tags",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/tag/"
+      },
+      "docs": "Bulk delete tags"
+    },
+    {
+      "info": {
+        "name": "Get tag",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/tag/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get tag"
+    },
+    {
+      "info": {
+        "name": "Update tag",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/tag/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update tag"
+    },
+    {
+      "info": {
+        "name": "Delete tag",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/tag/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete tag"
+    },
+    {
+      "info": {
+        "name": "Bulk create tags",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/tag/bulk_create"
+      },
+      "docs": "Bulk create tags"
+    },
+    {
+      "info": {
+        "name": "List annotation layers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/annotation_layer/"
+      },
+      "docs": "List annotation layers"
+    },
+    {
+      "info": {
+        "name": "Create annotation layer",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/annotation_layer/"
+      },
+      "docs": "Create annotation layer"
+    },
+    {
+      "info": {
+        "name": "Bulk delete annotation layers",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/annotation_layer/"
+      },
+      "docs": "Bulk delete annotation layers"
+    },
+    {
+      "info": {
+        "name": "Get annotation layer",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get annotation layer"
+    },
+    {
+      "info": {
+        "name": "Update annotation layer",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update annotation layer"
+    },
+    {
+      "info": {
+        "name": "Delete annotation layer",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete annotation layer"
+    },
+    {
+      "info": {
+        "name": "List annotations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List annotations"
+    },
+    {
+      "info": {
+        "name": "Create annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Create annotation"
+    },
+    {
+      "info": {
+        "name": "Bulk delete annotations",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Bulk delete annotations"
+    },
+    {
+      "info": {
+        "name": "Get annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/:annotation_id",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "annotation_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get annotation"
+    },
+    {
+      "info": {
+        "name": "Update annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/:annotation_id",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "annotation_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update annotation"
+    },
+    {
+      "info": {
+        "name": "Delete annotation",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/:annotation_id",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "annotation_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete annotation"
+    },
+    {
+      "info": {
+        "name": "List CSS templates",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/css_template/"
+      },
+      "docs": "List CSS templates"
+    },
+    {
+      "info": {
+        "name": "Create CSS template",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/css_template/"
+      },
+      "docs": "Create CSS template"
+    },
+    {
+      "info": {
+        "name": "Bulk delete CSS templates",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/css_template/"
+      },
+      "docs": "Bulk delete CSS templates"
+    },
+    {
+      "info": {
+        "name": "Get CSS template",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/css_template/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get CSS template"
+    },
+    {
+      "info": {
+        "name": "Update CSS template",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/css_template/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update CSS template"
+    },
+    {
+      "info": {
+        "name": "Delete CSS template",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/css_template/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete CSS template"
+    },
+    {
+      "info": {
+        "name": "List report schedules",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/report/"
+      },
+      "docs": "List report schedules"
+    },
+    {
+      "info": {
+        "name": "Create report schedule",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/report/"
+      },
+      "docs": "Create report schedule"
+    },
+    {
+      "info": {
+        "name": "Bulk delete report schedules",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/report/"
+      },
+      "docs": "Bulk delete report schedules"
+    },
+    {
+      "info": {
+        "name": "Get report schedule",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/report/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get report schedule"
+    },
+    {
+      "info": {
+        "name": "Update report schedule",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/report/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update report schedule"
+    },
+    {
+      "info": {
+        "name": "Delete report schedule",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/report/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete report schedule"
+    },
+    {
+      "info": {
+        "name": "List roles",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/roles/"
+      },
+      "docs": "List roles"
+    },
+    {
+      "info": {
+        "name": "Create role",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/security/roles/"
+      },
+      "docs": "Create role"
+    },
+    {
+      "info": {
+        "name": "Get role",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/roles/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get role"
+    },
+    {
+      "info": {
+        "name": "Update role",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/security/roles/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update role"
+    },
+    {
+      "info": {
+        "name": "Delete role",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/security/roles/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete role"
+    },
+    {
+      "info": {
+        "name": "List users",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/users/"
+      },
+      "docs": "List users"
+    },
+    {
+      "info": {
+        "name": "Create user",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/security/users/"
+      },
+      "docs": "Create user"
+    },
+    {
+      "info": {
+        "name": "Get user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/users/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get user"
+    },
+    {
+      "info": {
+        "name": "Update user",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/security/users/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update user"
+    },
+    {
+      "info": {
+        "name": "Delete user",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/security/users/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete user"
+    },
+    {
+      "info": {
+        "name": "List permissions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/permissions/"
+      },
+      "docs": "List permissions"
+    },
+    {
+      "info": {
+        "name": "List security groups",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/groups/"
+      },
+      "docs": "List security groups"
+    },
+    {
+      "info": {
+        "name": "Create security group",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/security/groups/"
+      },
+      "docs": "Create security group"
+    },
+    {
+      "info": {
+        "name": "Get security group",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/security/groups/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get security group"
+    },
+    {
+      "info": {
+        "name": "Update security group",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/security/groups/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update security group"
+    },
+    {
+      "info": {
+        "name": "Delete security group",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/security/groups/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete security group"
+    },
+    {
+      "info": {
+        "name": "List themes",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/theme/"
+      },
+      "docs": "List themes"
+    },
+    {
+      "info": {
+        "name": "Create theme",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/theme/"
+      },
+      "docs": "Create theme"
+    },
+    {
+      "info": {
+        "name": "Bulk delete themes",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/theme/"
+      },
+      "docs": "Bulk delete themes"
+    },
+    {
+      "info": {
+        "name": "Get theme",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/theme/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get theme"
+    },
+    {
+      "info": {
+        "name": "Update theme",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/theme/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update theme"
+    },
+    {
+      "info": {
+        "name": "Delete theme",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://localhost:8088/api/v1/theme/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete theme"
+    },
+    {
+      "info": {
+        "name": "List logs",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/log/"
+      },
+      "docs": "List logs"
+    },
+    {
+      "info": {
+        "name": "Create log entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/log/"
+      },
+      "docs": "Create log entry"
+    },
+    {
+      "info": {
+        "name": "Get log entry",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/log/:pk",
+        "params": [
+          {
+            "name": "pk",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get log entry"
+    },
+    {
+      "info": {
+        "name": "Current user info",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/me/"
+      },
+      "docs": "Current user info"
+    },
+    {
+      "info": {
+        "name": "Update current user",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://localhost:8088/api/v1/me/"
+      },
+      "docs": "Update current user"
+    },
+    {
+      "info": {
+        "name": "Current user roles",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/me/roles/"
+      },
+      "docs": "Current user roles"
+    },
+    {
+      "info": {
+        "name": "Application menu",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/menu/"
+      },
+      "docs": "Application menu"
+    },
+    {
+      "info": {
+        "name": "Available domains",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/available_domains/"
+      },
+      "docs": "Available domains"
+    },
+    {
+      "info": {
+        "name": "Async events",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/async_event/"
+      },
+      "docs": "Async events"
+    },
+    {
+      "info": {
+        "name": "Export assets bundle",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/assets/export/"
+      },
+      "docs": "Export assets bundle"
+    },
+    {
+      "info": {
+        "name": "Import assets bundle",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/assets/import/"
+      },
+      "docs": "Import assets bundle"
+    },
+    {
+      "info": {
+        "name": "Invalidate cache keys",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8088/api/v1/cachekey/invalidate"
+      },
+      "docs": "Invalidate cache keys"
+    },
+    {
+      "info": {
+        "name": "Get embedded dashboard",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8088/api/v1/embedded_dashboard/:uuid",
+        "params": [
+          {
+            "name": "uuid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get embedded dashboard"
+    }
+  ],
+  "bundled": true
+}
