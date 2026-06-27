@@ -58,7 +58,7 @@ common:
     url: https://github.com/apache/superset/discussions
   - type: TermsOfService
     url: https://www.apache.org/licenses/
-  - type: SDK
+  - type: SDKs
     url: https://pypi.org/project/apache-superset/
     title: Python Package
   - type: Features
