@@ -44,6 +44,10 @@ apis:
       - url: openapi/apache-superset-openapi.yml
         type: OpenAPI
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-superset-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-superset-domain-security.yml
   - type: GitHubRepository
     url: https://github.com/apache/superset
   - type: Documentation
