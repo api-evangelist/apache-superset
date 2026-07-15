@@ -44,6 +44,8 @@ apis:
       - url: openapi/apache-superset-openapi.yml
         type: OpenAPI
 common:
+  - type: AgenticAccess
+    url: agentic-access/apache-superset-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/apache-superset-vulnerability-disclosure.yml
   - type: DomainSecurity
