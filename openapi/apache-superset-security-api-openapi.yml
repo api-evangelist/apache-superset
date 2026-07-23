@@ -1,0 +1,218 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Security API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Security
+paths:
+  /api/v1/security/csrf_token/:
+    get:
+      summary: Get CSRF token
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/guest_token/:
+    post:
+      summary: Issue a guest token
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/login:
+    post:
+      summary: Log in and obtain access token
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/refresh:
+    post:
+      summary: Refresh access token
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/roles/:
+    get:
+      summary: List roles
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    post:
+      summary: Create role
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Security
+  /api/v1/security/roles/{pk}:
+    get:
+      summary: Get role
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    put:
+      summary: Update role
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    delete:
+      summary: Delete role
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/users/:
+    get:
+      summary: List users
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    post:
+      summary: Create user
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Security
+  /api/v1/security/users/{pk}:
+    get:
+      summary: Get user
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    put:
+      summary: Update user
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    delete:
+      summary: Delete user
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/permissions/:
+    get:
+      summary: List permissions
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+  /api/v1/security/groups/:
+    get:
+      summary: List security groups
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    post:
+      summary: Create security group
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Security
+  /api/v1/security/groups/{pk}:
+    get:
+      summary: Get security group
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    put:
+      summary: Update security group
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+    delete:
+      summary: Delete security group
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Security
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08

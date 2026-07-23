@@ -1,0 +1,29 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Assets API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Assets
+paths:
+  /api/v1/assets/export/:
+    get:
+      summary: Export assets bundle
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Assets
+  /api/v1/assets/import/:
+    post:
+      summary: Import assets bundle
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Assets
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08

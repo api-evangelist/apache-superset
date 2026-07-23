@@ -1,0 +1,128 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Database API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Database
+paths:
+  /api/v1/database/:
+    get:
+      summary: List databases
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+    post:
+      summary: Create database
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Database
+  /api/v1/database/{pk}:
+    get:
+      summary: Get database
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+    put:
+      summary: Update database
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+    delete:
+      summary: Delete database
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+  /api/v1/database/{pk}/schemas/:
+    get:
+      summary: List database schemas
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+  /api/v1/database/{pk}/tables/:
+    get:
+      summary: List database tables
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+  /api/v1/database/test_connection/:
+    post:
+      summary: Test database connection
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+  /api/v1/database/available/:
+    get:
+      summary: Available database engines
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+  /api/v1/database/import/:
+    post:
+      summary: Import databases
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+  /api/v1/database/export/:
+    get:
+      summary: Export databases
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Database
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08

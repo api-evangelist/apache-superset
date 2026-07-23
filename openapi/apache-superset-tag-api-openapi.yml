@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Tag API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Tag
+paths:
+  /api/v1/tag/:
+    get:
+      summary: List tags
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tag
+    post:
+      summary: Create tag
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Tag
+    delete:
+      summary: Bulk delete tags
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tag
+  /api/v1/tag/{pk}:
+    get:
+      summary: Get tag
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tag
+    put:
+      summary: Update tag
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tag
+    delete:
+      summary: Delete tag
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tag
+  /api/v1/tag/bulk_create:
+    post:
+      summary: Bulk create tags
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Tag
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08

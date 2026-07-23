@@ -1,0 +1,327 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Dashboard API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Dashboard
+paths:
+  /api/v1/dashboard/:
+    get:
+      summary: List dashboards
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    post:
+      summary: Create dashboard
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Dashboard
+    delete:
+      summary: Bulk delete dashboards
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/_info:
+    get:
+      summary: Dashboard schema info
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{id_or_slug}:
+    get:
+      summary: Get dashboard
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{pk}:
+    put:
+      summary: Update dashboard
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    delete:
+      summary: Delete dashboard
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{id_or_slug}/charts:
+    get:
+      summary: List charts of a dashboard
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{id_or_slug}/datasets:
+    get:
+      summary: List datasets of a dashboard
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{id_or_slug}/copy/:
+    post:
+      summary: Copy dashboard
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{id_or_slug}/embedded:
+    get:
+      summary: Get embedded dashboard config
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    post:
+      summary: Create embedded dashboard config
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Dashboard
+    put:
+      summary: Update embedded dashboard config
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    delete:
+      summary: Delete embedded dashboard config
+      parameters:
+      - name: id_or_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/export/:
+    get:
+      summary: Export dashboards
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/import/:
+    post:
+      summary: Import dashboards
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/favorite_status/:
+    get:
+      summary: Dashboard favorite status
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{pk}/favorites/:
+    post:
+      summary: Favorite dashboard
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    delete:
+      summary: Unfavorite dashboard
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{pk}/permalink:
+    post:
+      summary: Create dashboard permalink
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Dashboard
+  /api/v1/dashboard/permalink/{key}:
+    get:
+      summary: Resolve dashboard permalink
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{pk}/filter_state:
+    post:
+      summary: Create filter state
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Dashboard
+  /api/v1/dashboard/{pk}/filter_state/{key}:
+    get:
+      summary: Get filter state
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    put:
+      summary: Update filter state
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+    delete:
+      summary: Delete filter state
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Dashboard
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08

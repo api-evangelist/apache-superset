@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Sqllab API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Sqllab
+paths:
+  /api/v1/sqllab/:
+    get:
+      summary: SQL Lab home info
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sqllab
+  /api/v1/sqllab/execute/:
+    post:
+      summary: Execute SQL
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sqllab
+  /api/v1/sqllab/estimate/:
+    post:
+      summary: Estimate SQL cost
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sqllab
+  /api/v1/sqllab/format_sql/:
+    post:
+      summary: Format SQL
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sqllab
+  /api/v1/sqllab/results/:
+    get:
+      summary: Fetch SQL results
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sqllab
+  /api/v1/sqllab/export/{client_id}/:
+    get:
+      summary: Export SQL Lab results
+      parameters:
+      - name: client_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Sqllab
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08

@@ -1,0 +1,75 @@
+openapi: 3.1.0
+info:
+  title: Apache Superset REST Annotation Layer Report API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
+servers:
+- url: http://localhost:8088
+  description: Superset
+tags:
+- name: Report
+paths:
+  /api/v1/report/:
+    get:
+      summary: List report schedules
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Report
+    post:
+      summary: Create report schedule
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Report
+    delete:
+      summary: Bulk delete report schedules
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Report
+  /api/v1/report/{pk}:
+    get:
+      summary: Get report schedule
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Report
+    put:
+      summary: Update report schedule
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Report
+    delete:
+      summary: Delete report schedule
+      parameters:
+      - name: pk
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Report
+x-generated-from: https://superset.apache.org/developer-docs/api
+x-generated-by: claude-crawl-2026-05-08
