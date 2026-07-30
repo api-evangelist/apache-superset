@@ -6,9 +6,21 @@ description: >-
   most SQL-speaking databases. Superset exposes a comprehensive REST API for programmatic access to dashboards, charts,
   datasets, databases, and user management. It is an Apache Software Foundation top-level project.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-superset.png
 tags:
   - Analytics
   - BI
@@ -21,28 +33,279 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-superset/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-superset:apache-superset-rest-api
-    name: Apache Superset REST API
-    description: >-
-      The Superset REST API v1 provides programmatic access to all Superset resources including dashboards (28
-      endpoints), charts (20 endpoints), datasets (19 endpoints), databases (30 endpoints), SQL Lab queries (7
-      endpoints), saved queries (17 endpoints), tags, annotation layers, CSS templates, themes, row-level security, and
-      user management. Authentication uses JWT Bearer tokens obtained via POST /api/v1/security/login.
-    humanURL: https://superset.apache.org/developer-docs/api
-    tags:
-      - REST
-      - Dashboards
-      - Charts
-      - Datasets
-      - SQL
-      - Analytics
-    properties:
-      - type: Documentation
-        url: https://superset.apache.org/developer-docs/api
-      - type: APIReference
-        url: https://superset.apache.org/docs/api
-      - url: openapi/apache-superset-openapi.yml
-        type: OpenAPI
+- aid: apache-superset:apache-superset-annotation-layer-api
+  name: Apache Superset Annotation Layer API
+  description: The Annotation Layer API from Apache Superset — 4 operation(s) for annotation layer.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Annotation Layer
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-annotation-layer-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-assets-api
+  name: Apache Superset Assets API
+  description: The Assets API from Apache Superset — 2 operation(s) for assets.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-assets-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-async-event-api
+  name: Apache Superset Async Event API
+  description: The Async Event API from Apache Superset — 1 operation(s) for async event.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Async Event
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-async-event-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-available-domains-api
+  name: Apache Superset Available Domains API
+  description: The Available Domains API from Apache Superset — 1 operation(s) for available domains.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Available Domains
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-available-domains-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-cachekey-api
+  name: Apache Superset Cachekey API
+  description: The Cachekey API from Apache Superset — 1 operation(s) for cachekey.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Cachekey
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-cachekey-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-chart-api
+  name: Apache Superset Chart API
+  description: The Chart API from Apache Superset — 10 operation(s) for chart.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Chart
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-chart-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-css-template-api
+  name: Apache Superset Css Template API
+  description: The Css Template API from Apache Superset — 2 operation(s) for css template.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Css Template
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-css-template-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-dashboard-api
+  name: Apache Superset Dashboard API
+  description: The Dashboard API from Apache Superset — 16 operation(s) for dashboard.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Dashboard
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-dashboard-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-database-api
+  name: Apache Superset Database API
+  description: The Database API from Apache Superset — 8 operation(s) for database.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Database
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-database-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-dataset-api
+  name: Apache Superset Dataset API
+  description: The Dataset API from Apache Superset — 8 operation(s) for dataset.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Dataset
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-dataset-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-embedded-dashboard-api
+  name: Apache Superset Embedded Dashboard API
+  description: The Embedded Dashboard API from Apache Superset — 1 operation(s) for embedded dashboard.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Embedded Dashboard
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-embedded-dashboard-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-log-api
+  name: Apache Superset Log API
+  description: The Log API from Apache Superset — 2 operation(s) for log.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Log
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-log-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-me-api
+  name: Apache Superset Me API
+  description: The Me API from Apache Superset — 2 operation(s) for me.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-me-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-menu-api
+  name: Apache Superset Menu API
+  description: The Menu API from Apache Superset — 1 operation(s) for menu.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Menu
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-menu-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-query-api
+  name: Apache Superset Query API
+  description: The Query API from Apache Superset — 3 operation(s) for query.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Query
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-query-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-report-api
+  name: Apache Superset Report API
+  description: The Report API from Apache Superset — 2 operation(s) for report.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Report
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-report-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-saved-query-api
+  name: Apache Superset Saved Query API
+  description: The Saved Query API from Apache Superset — 2 operation(s) for saved query.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Saved Query
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-saved-query-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-security-api
+  name: Apache Superset Security API
+  description: The Security API from Apache Superset — 11 operation(s) for security.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Security
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-security-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-sqllab-api
+  name: Apache Superset Sqllab API
+  description: The Sqllab API from Apache Superset — 6 operation(s) for sqllab.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Sqllab
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-sqllab-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-tag-api
+  name: Apache Superset Tag API
+  description: The Tag API from Apache Superset — 3 operation(s) for tag.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Tag
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-tag-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-theme-api
+  name: Apache Superset Theme API
+  description: The Theme API from Apache Superset — 2 operation(s) for theme.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - Theme
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-theme-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
 common:
   - type: AgenticAccess
     url: agentic-access/apache-superset-agentic-access.yml
