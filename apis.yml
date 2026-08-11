@@ -307,6 +307,17 @@ apis:
   - type: APIReference
     url: https://superset.apache.org/docs/api
 common:
+  - type: IssueTracker
+    url: https://github.com/apache/superset/issues
+  - type: SecurityPolicy
+    url: https://github.com/apache/superset/blob/master/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/apache/superset/blob/master/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/apache/superset/blob/master/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/apache/superset/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/apache-superset-agentic-access.yml
   - type: VulnerabilityDisclosure
