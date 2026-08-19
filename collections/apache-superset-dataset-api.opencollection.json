@@ -1,0 +1,167 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Dataset API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Dataset",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dataset/"
+          },
+          "docs": "List datasets"
+        },
+        {
+          "info": {
+            "name": "Create dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dataset/"
+          },
+          "docs": "Create dataset"
+        },
+        {
+          "info": {
+            "name": "Bulk delete datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dataset/"
+          },
+          "docs": "Bulk delete datasets"
+        },
+        {
+          "info": {
+            "name": "Dataset schema info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dataset/_info"
+          },
+          "docs": "Dataset schema info"
+        },
+        {
+          "info": {
+            "name": "Get dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dataset/:id_or_uuid",
+            "params": [
+              {
+                "name": "id_or_uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get dataset"
+        },
+        {
+          "info": {
+            "name": "Update dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/dataset/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update dataset"
+        },
+        {
+          "info": {
+            "name": "Delete dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dataset/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete dataset"
+        },
+        {
+          "info": {
+            "name": "Refresh dataset metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/dataset/:pk/refresh",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Refresh dataset metadata"
+        },
+        {
+          "info": {
+            "name": "Duplicate dataset",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dataset/duplicate"
+          },
+          "docs": "Duplicate dataset"
+        },
+        {
+          "info": {
+            "name": "Export datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dataset/export/"
+          },
+          "docs": "Export datasets"
+        },
+        {
+          "info": {
+            "name": "Import datasets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dataset/import/"
+          },
+          "docs": "Import datasets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

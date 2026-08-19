@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Theme API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Theme",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List themes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/theme/"
+          },
+          "docs": "List themes"
+        },
+        {
+          "info": {
+            "name": "Create theme",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/theme/"
+          },
+          "docs": "Create theme"
+        },
+        {
+          "info": {
+            "name": "Bulk delete themes",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/theme/"
+          },
+          "docs": "Bulk delete themes"
+        },
+        {
+          "info": {
+            "name": "Get theme",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/theme/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get theme"
+        },
+        {
+          "info": {
+            "name": "Update theme",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/theme/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update theme"
+        },
+        {
+          "info": {
+            "name": "Delete theme",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/theme/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete theme"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

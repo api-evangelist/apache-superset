@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Css Template API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Css Template",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List CSS templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/css_template/"
+          },
+          "docs": "List CSS templates"
+        },
+        {
+          "info": {
+            "name": "Create CSS template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/css_template/"
+          },
+          "docs": "Create CSS template"
+        },
+        {
+          "info": {
+            "name": "Bulk delete CSS templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/css_template/"
+          },
+          "docs": "Bulk delete CSS templates"
+        },
+        {
+          "info": {
+            "name": "Get CSS template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/css_template/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get CSS template"
+        },
+        {
+          "info": {
+            "name": "Update CSS template",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/css_template/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update CSS template"
+        },
+        {
+          "info": {
+            "name": "Delete CSS template",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/css_template/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete CSS template"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,116 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Tag API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tag",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/tag/"
+          },
+          "docs": "List tags"
+        },
+        {
+          "info": {
+            "name": "Create tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/tag/"
+          },
+          "docs": "Create tag"
+        },
+        {
+          "info": {
+            "name": "Bulk delete tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/tag/"
+          },
+          "docs": "Bulk delete tags"
+        },
+        {
+          "info": {
+            "name": "Get tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/tag/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get tag"
+        },
+        {
+          "info": {
+            "name": "Update tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/tag/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update tag"
+        },
+        {
+          "info": {
+            "name": "Delete tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/tag/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete tag"
+        },
+        {
+          "info": {
+            "name": "Bulk create tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/tag/bulk_create"
+          },
+          "docs": "Bulk create tags"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

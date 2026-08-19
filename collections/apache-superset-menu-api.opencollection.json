@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Menu API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Menu",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Application menu",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/menu/"
+          },
+          "docs": "Application menu"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

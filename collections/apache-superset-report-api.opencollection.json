@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Report API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Report",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List report schedules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/report/"
+          },
+          "docs": "List report schedules"
+        },
+        {
+          "info": {
+            "name": "Create report schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/report/"
+          },
+          "docs": "Create report schedule"
+        },
+        {
+          "info": {
+            "name": "Bulk delete report schedules",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/report/"
+          },
+          "docs": "Bulk delete report schedules"
+        },
+        {
+          "info": {
+            "name": "Get report schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/report/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get report schedule"
+        },
+        {
+          "info": {
+            "name": "Update report schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/report/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update report schedule"
+        },
+        {
+          "info": {
+            "name": "Delete report schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/report/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete report schedule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

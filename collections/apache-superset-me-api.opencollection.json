@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Me API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Current user info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/me/"
+          },
+          "docs": "Current user info"
+        },
+        {
+          "info": {
+            "name": "Update current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/me/"
+          },
+          "docs": "Update current user"
+        },
+        {
+          "info": {
+            "name": "Current user roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/me/roles/"
+          },
+          "docs": "Current user roles"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Assets API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Export assets bundle",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/assets/export/"
+          },
+          "docs": "Export assets bundle"
+        },
+        {
+          "info": {
+            "name": "Import assets bundle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/assets/import/"
+          },
+          "docs": "Import assets bundle"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,221 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Chart API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Chart",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List charts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/chart/"
+          },
+          "docs": "List charts"
+        },
+        {
+          "info": {
+            "name": "Create chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/chart/"
+          },
+          "docs": "Create chart"
+        },
+        {
+          "info": {
+            "name": "Bulk delete charts",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/chart/"
+          },
+          "docs": "Bulk delete charts"
+        },
+        {
+          "info": {
+            "name": "Chart schema info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/chart/_info"
+          },
+          "docs": "Chart schema info"
+        },
+        {
+          "info": {
+            "name": "Get chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/chart/:id_or_uuid",
+            "params": [
+              {
+                "name": "id_or_uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get chart"
+        },
+        {
+          "info": {
+            "name": "Update chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/chart/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update chart"
+        },
+        {
+          "info": {
+            "name": "Delete chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/chart/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete chart"
+        },
+        {
+          "info": {
+            "name": "Get chart data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/chart/:pk/data/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get chart data"
+        },
+        {
+          "info": {
+            "name": "Run chart data query",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/chart/data"
+          },
+          "docs": "Run chart data query"
+        },
+        {
+          "info": {
+            "name": "Fetch cached chart data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/chart/data/:cache_key",
+            "params": [
+              {
+                "name": "cache_key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch cached chart data"
+        },
+        {
+          "info": {
+            "name": "Export charts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/chart/export/"
+          },
+          "docs": "Export charts"
+        },
+        {
+          "info": {
+            "name": "Import charts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/chart/import/"
+          },
+          "docs": "Import charts"
+        },
+        {
+          "info": {
+            "name": "Favorite chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/chart/:pk/favorites/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Favorite chart"
+        },
+        {
+          "info": {
+            "name": "Unfavorite chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/chart/:pk/favorites/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unfavorite chart"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

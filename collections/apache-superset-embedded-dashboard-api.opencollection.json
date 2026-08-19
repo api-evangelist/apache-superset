@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Embedded Dashboard API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Embedded Dashboard",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get embedded dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/embedded_dashboard/:uuid",
+            "params": [
+              {
+                "name": "uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get embedded dashboard"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

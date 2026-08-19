@@ -1,0 +1,217 @@
+{
+  "item": [
+    {
+      "id": "97c37ce7-ef52-404e-86db-2b1c079ead15",
+      "name": "Me",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b70b87e4-7a1f-4c90-99b8-0f89946c5d17",
+          "name": "Current user info",
+          "request": {
+            "name": "Current user info",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "me",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d625e63-81fc-4d82-88ea-f5fe49f334cc",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "me",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6922c1c2-92b7-48ef-a905-d9101b00de67",
+          "name": "Update current user",
+          "request": {
+            "name": "Update current user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "me",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eee288be-c30f-4eed-be47-fdf184df92b9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "me",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "58f5ef32-50bd-4854-bad1-32d8dd4b7a26",
+          "name": "Current user roles",
+          "request": {
+            "name": "Current user roles",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "me",
+                "roles",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "315edec7-a1ec-4812-b07a-716bdf23141d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "me",
+                    "roles",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8088",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3719e443-e077-4017-a9aa-13d2ec796458",
+    "name": "Apache Superset REST Annotation Layer Me API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.",
+      "type": "text/plain"
+    }
+  }
+}

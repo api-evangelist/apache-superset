@@ -1,0 +1,93 @@
+{
+  "item": [
+    {
+      "id": "11f68355-9706-4735-8429-42c087368f0c",
+      "name": "Async Event",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cc46a39c-ee5a-4046-b87e-3cb6eae53a0d",
+          "name": "Async events",
+          "request": {
+            "name": "Async events",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "async_event",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c178326-8f18-4d4f-b13c-e5aad4c6bea0",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "async_event",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8088",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "58f2b797-7969-40da-b23d-14307726631b",
+    "name": "Apache Superset REST Annotation Layer Async Event API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.",
+      "type": "text/plain"
+    }
+  }
+}

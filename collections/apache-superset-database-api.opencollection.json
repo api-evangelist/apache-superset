@@ -1,0 +1,174 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Database API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Database",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List databases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/database/"
+          },
+          "docs": "List databases"
+        },
+        {
+          "info": {
+            "name": "Create database",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/database/"
+          },
+          "docs": "Create database"
+        },
+        {
+          "info": {
+            "name": "Get database",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/database/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get database"
+        },
+        {
+          "info": {
+            "name": "Update database",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/database/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update database"
+        },
+        {
+          "info": {
+            "name": "Delete database",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/database/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete database"
+        },
+        {
+          "info": {
+            "name": "List database schemas",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/database/:pk/schemas/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List database schemas"
+        },
+        {
+          "info": {
+            "name": "List database tables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/database/:pk/tables/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List database tables"
+        },
+        {
+          "info": {
+            "name": "Test database connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/database/test_connection/"
+          },
+          "docs": "Test database connection"
+        },
+        {
+          "info": {
+            "name": "Available database engines",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/database/available/"
+          },
+          "docs": "Available database engines"
+        },
+        {
+          "info": {
+            "name": "Import databases",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/database/import/"
+          },
+          "docs": "Import databases"
+        },
+        {
+          "info": {
+            "name": "Export databases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/database/export/"
+          },
+          "docs": "Export databases"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

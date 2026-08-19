@@ -1,0 +1,228 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Annotation Layer",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List annotation layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/annotation_layer/"
+          },
+          "docs": "List annotation layers"
+        },
+        {
+          "info": {
+            "name": "Create annotation layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/annotation_layer/"
+          },
+          "docs": "Create annotation layer"
+        },
+        {
+          "info": {
+            "name": "Bulk delete annotation layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/annotation_layer/"
+          },
+          "docs": "Bulk delete annotation layers"
+        },
+        {
+          "info": {
+            "name": "Get annotation layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get annotation layer"
+        },
+        {
+          "info": {
+            "name": "Update annotation layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update annotation layer"
+        },
+        {
+          "info": {
+            "name": "Delete annotation layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete annotation layer"
+        },
+        {
+          "info": {
+            "name": "List annotations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List annotations"
+        },
+        {
+          "info": {
+            "name": "Create annotation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create annotation"
+        },
+        {
+          "info": {
+            "name": "Bulk delete annotations",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Bulk delete annotations"
+        },
+        {
+          "info": {
+            "name": "Get annotation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/:annotation_id",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "annotation_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get annotation"
+        },
+        {
+          "info": {
+            "name": "Update annotation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/:annotation_id",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "annotation_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update annotation"
+        },
+        {
+          "info": {
+            "name": "Delete annotation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/annotation_layer/:pk/annotation/:annotation_id",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "annotation_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete annotation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

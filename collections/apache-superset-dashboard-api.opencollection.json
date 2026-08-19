@@ -1,0 +1,434 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Dashboard API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Dashboard",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List dashboards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/"
+          },
+          "docs": "List dashboards"
+        },
+        {
+          "info": {
+            "name": "Create dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/"
+          },
+          "docs": "Create dashboard"
+        },
+        {
+          "info": {
+            "name": "Bulk delete dashboards",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dashboard/"
+          },
+          "docs": "Bulk delete dashboards"
+        },
+        {
+          "info": {
+            "name": "Dashboard schema info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/_info"
+          },
+          "docs": "Dashboard schema info"
+        },
+        {
+          "info": {
+            "name": "Get dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get dashboard"
+        },
+        {
+          "info": {
+            "name": "Update dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update dashboard"
+        },
+        {
+          "info": {
+            "name": "Delete dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete dashboard"
+        },
+        {
+          "info": {
+            "name": "List charts of a dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/charts",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List charts of a dashboard"
+        },
+        {
+          "info": {
+            "name": "List datasets of a dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/datasets",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List datasets of a dashboard"
+        },
+        {
+          "info": {
+            "name": "Copy dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/copy/",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Copy dashboard"
+        },
+        {
+          "info": {
+            "name": "Get embedded dashboard config",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get embedded dashboard config"
+        },
+        {
+          "info": {
+            "name": "Create embedded dashboard config",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create embedded dashboard config"
+        },
+        {
+          "info": {
+            "name": "Update embedded dashboard config",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update embedded dashboard config"
+        },
+        {
+          "info": {
+            "name": "Delete embedded dashboard config",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dashboard/:id_or_slug/embedded",
+            "params": [
+              {
+                "name": "id_or_slug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete embedded dashboard config"
+        },
+        {
+          "info": {
+            "name": "Export dashboards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/export/"
+          },
+          "docs": "Export dashboards"
+        },
+        {
+          "info": {
+            "name": "Import dashboards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/import/"
+          },
+          "docs": "Import dashboards"
+        },
+        {
+          "info": {
+            "name": "Dashboard favorite status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/favorite_status/"
+          },
+          "docs": "Dashboard favorite status"
+        },
+        {
+          "info": {
+            "name": "Favorite dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/favorites/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Favorite dashboard"
+        },
+        {
+          "info": {
+            "name": "Unfavorite dashboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/favorites/",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unfavorite dashboard"
+        },
+        {
+          "info": {
+            "name": "Create dashboard permalink",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/permalink",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create dashboard permalink"
+        },
+        {
+          "info": {
+            "name": "Resolve dashboard permalink",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/permalink/:key",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Resolve dashboard permalink"
+        },
+        {
+          "info": {
+            "name": "Create filter state",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create filter state"
+        },
+        {
+          "info": {
+            "name": "Get filter state",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state/:key",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get filter state"
+        },
+        {
+          "info": {
+            "name": "Update filter state",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state/:key",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update filter state"
+        },
+        {
+          "info": {
+            "name": "Delete filter state",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/dashboard/:pk/filter_state/:key",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete filter state"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

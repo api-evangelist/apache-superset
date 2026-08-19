@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Log API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Log",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List logs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/log/"
+          },
+          "docs": "List logs"
+        },
+        {
+          "info": {
+            "name": "Create log entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/log/"
+          },
+          "docs": "Create log entry"
+        },
+        {
+          "info": {
+            "name": "Get log entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/log/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get log entry"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

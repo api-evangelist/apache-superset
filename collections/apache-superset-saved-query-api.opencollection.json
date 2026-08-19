@@ -1,0 +1,105 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Saved Query API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Saved Query",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List saved queries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/saved_query/"
+          },
+          "docs": "List saved queries"
+        },
+        {
+          "info": {
+            "name": "Create saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/saved_query/"
+          },
+          "docs": "Create saved query"
+        },
+        {
+          "info": {
+            "name": "Bulk delete saved queries",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/saved_query/"
+          },
+          "docs": "Bulk delete saved queries"
+        },
+        {
+          "info": {
+            "name": "Get saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/saved_query/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get saved query"
+        },
+        {
+          "info": {
+            "name": "Update saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://localhost:8088/api/v1/saved_query/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update saved query"
+        },
+        {
+          "info": {
+            "name": "Delete saved query",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8088/api/v1/saved_query/:pk",
+            "params": [
+              {
+                "name": "pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete saved query"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

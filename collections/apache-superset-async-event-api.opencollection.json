@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Async Event API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Async Event",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Async events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/async_event/"
+          },
+          "docs": "Async events"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Superset REST Annotation Layer Sqllab API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sqllab",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "SQL Lab home info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/sqllab/"
+          },
+          "docs": "SQL Lab home info"
+        },
+        {
+          "info": {
+            "name": "Execute SQL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/sqllab/execute/"
+          },
+          "docs": "Execute SQL"
+        },
+        {
+          "info": {
+            "name": "Estimate SQL cost",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/sqllab/estimate/"
+          },
+          "docs": "Estimate SQL cost"
+        },
+        {
+          "info": {
+            "name": "Format SQL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8088/api/v1/sqllab/format_sql/"
+          },
+          "docs": "Format SQL"
+        },
+        {
+          "info": {
+            "name": "Fetch SQL results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/sqllab/results/"
+          },
+          "docs": "Fetch SQL results"
+        },
+        {
+          "info": {
+            "name": "Export SQL Lab results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8088/api/v1/sqllab/export/:client_id/",
+            "params": [
+              {
+                "name": "client_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Export SQL Lab results"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
