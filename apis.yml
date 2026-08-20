@@ -27,6 +27,13 @@ tags:
   - Dashboard
   - Data Visualization
   - SQL
+  - Open-Source
+tags_raw:
+  - Analytics
+  - BI
+  - Dashboard
+  - Data Visualization
+  - SQL
   - Open Source
 created: '2026-03-16'
 modified: '2026-05-19'
@@ -207,6 +214,8 @@ apis:
   description: The Menu API from Apache Superset — 1 operation(s) for menu.
   humanURL: https://superset.apache.org/developer-docs/api
   tags:
+  - Menus
+  tags_raw:
   - Menu
   properties:
   - type: OpenAPI
@@ -272,6 +281,8 @@ apis:
   description: The Sqllab API from Apache Superset — 6 operation(s) for sqllab.
   humanURL: https://superset.apache.org/developer-docs/api
   tags:
+  - SQL Lab
+  tags_raw:
   - Sqllab
   properties:
   - type: OpenAPI
