@@ -295,7 +295,7 @@ apis:
   description: The Sqllab API from Apache Superset — 6 operation(s) for sqllab.
   humanURL: https://superset.apache.org/developer-docs/api
   tags:
-  - SQL Lab
+  - Sqllab
   tags_raw:
   - Sqllab
   properties:
