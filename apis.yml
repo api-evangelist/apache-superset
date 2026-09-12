@@ -332,6 +332,8 @@ apis:
   - type: APIReference
     url: https://superset.apache.org/docs/api
 common:
+  - type: Website
+    url: https://www.apache.org/
   - type: IssueTracker
     url: https://github.com/apache/superset/issues
   - type: SecurityPolicy
