@@ -290,21 +290,6 @@ apis:
     url: https://superset.apache.org/developer-docs/api
   - type: APIReference
     url: https://superset.apache.org/docs/api
-- aid: apache-superset:apache-superset-sqllab-api
-  name: Apache Superset Sqllab API
-  description: The Sqllab API from Apache Superset — 6 operation(s) for sqllab.
-  humanURL: https://superset.apache.org/developer-docs/api
-  tags:
-  - SQL Lab
-  tags_raw:
-  - Sqllab
-  properties:
-  - type: OpenAPI
-    url: openapi/apache-superset-sqllab-api-openapi.yml
-  - type: Documentation
-    url: https://superset.apache.org/developer-docs/api
-  - type: APIReference
-    url: https://superset.apache.org/docs/api
 - aid: apache-superset:apache-superset-tag-api
   name: Apache Superset Tag API
   description: The Tag API from Apache Superset — 3 operation(s) for tag.
@@ -327,6 +312,19 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/apache-superset-theme-api-openapi.yml
+  - type: Documentation
+    url: https://superset.apache.org/developer-docs/api
+  - type: APIReference
+    url: https://superset.apache.org/docs/api
+- aid: apache-superset:apache-superset-sql-lab-api
+  name: Apache Superset SQL Lab API
+  description: The SQL Lab API from Apache Superset — 6 operation(s) for sql lab.
+  humanURL: https://superset.apache.org/developer-docs/api
+  tags:
+  - SQL Lab
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-superset-sql-lab-api-openapi.yml
   - type: Documentation
     url: https://superset.apache.org/developer-docs/api
   - type: APIReference
