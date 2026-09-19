@@ -37,8 +37,8 @@ access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-superset.png
 tags:
   - Analytics
-  - BI
-  - Dashboard
+  - Business Intelligence
+  - Dashboards
   - Data Visualization
   - SQL
   - Open-Source
@@ -150,6 +150,8 @@ apis:
   description: The Dashboard API from Apache Superset — 16 operation(s) for dashboard.
   humanURL: https://superset.apache.org/developer-docs/api
   tags:
+  - Dashboards
+  tags_raw:
   - Dashboard
   properties:
   - type: OpenAPI
@@ -176,6 +178,8 @@ apis:
   description: The Dataset API from Apache Superset — 8 operation(s) for dataset.
   humanURL: https://superset.apache.org/developer-docs/api
   tags:
+  - Datasets
+  tags_raw:
   - Dataset
   properties:
   - type: OpenAPI
