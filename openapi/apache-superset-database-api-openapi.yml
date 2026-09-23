@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Database API
+  title: Apache Superset REST Database API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: getApiV1Database
+      x-operation-id-source: derived
     post:
       summary: Create database
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Database
+      operationId: postApiV1Database
+      x-operation-id-source: derived
   /api/v1/database/{pk}:
     get:
       summary: Get database
@@ -38,6 +42,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: getApiV1DatabaseByPk
+      x-operation-id-source: derived
     put:
       summary: Update database
       parameters:
@@ -51,6 +57,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: putApiV1DatabaseByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete database
       parameters:
@@ -64,6 +72,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: deleteApiV1DatabaseByPk
+      x-operation-id-source: derived
   /api/v1/database/{pk}/schemas/:
     get:
       summary: List database schemas
@@ -78,6 +88,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: getApiV1DatabaseByPkSchemas
+      x-operation-id-source: derived
   /api/v1/database/{pk}/tables/:
     get:
       summary: List database tables
@@ -92,6 +104,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: getApiV1DatabaseByPkTables
+      x-operation-id-source: derived
   /api/v1/database/test_connection/:
     post:
       summary: Test database connection
@@ -100,6 +114,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: postApiV1DatabaseTestConnection
+      x-operation-id-source: derived
   /api/v1/database/available/:
     get:
       summary: Available database engines
@@ -108,6 +124,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: getApiV1DatabaseAvailable
+      x-operation-id-source: derived
   /api/v1/database/import/:
     post:
       summary: Import databases
@@ -116,6 +134,8 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: postApiV1DatabaseImport
+      x-operation-id-source: derived
   /api/v1/database/export/:
     get:
       summary: Export databases
@@ -124,5 +144,7 @@ paths:
           description: OK
       tags:
       - Database
+      operationId: getApiV1DatabaseExport
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

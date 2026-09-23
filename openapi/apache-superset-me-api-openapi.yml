@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Me API
+  title: Apache Superset REST Me API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Me
+      operationId: getApiV1Me
+      x-operation-id-source: derived
     put:
       summary: Update current user
       responses:
@@ -24,6 +26,8 @@ paths:
           description: OK
       tags:
       - Me
+      operationId: putApiV1Me
+      x-operation-id-source: derived
   /api/v1/me/roles/:
     get:
       summary: Current user roles
@@ -32,5 +36,7 @@ paths:
           description: OK
       tags:
       - Me
+      operationId: getApiV1MeRoles
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

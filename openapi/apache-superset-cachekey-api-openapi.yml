@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Cachekey API
+  title: Apache Superset REST Cachekey API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,5 +17,7 @@ paths:
           description: OK
       tags:
       - Cachekey
+      operationId: postApiV1CachekeyInvalidate
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

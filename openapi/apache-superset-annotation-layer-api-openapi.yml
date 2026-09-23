@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Apache Superset REST Annotation Layer API
   version: '1.0'
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: getApiV1AnnotationLayer
+      x-operation-id-source: derived
     post:
       summary: Create annotation layer
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Annotation Layer
+      operationId: postApiV1AnnotationLayer
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete annotation layers
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: deleteApiV1AnnotationLayer
+      x-operation-id-source: derived
   /api/v1/annotation_layer/{pk}:
     get:
       summary: Get annotation layer
@@ -45,6 +51,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: getApiV1AnnotationLayerByPk
+      x-operation-id-source: derived
     put:
       summary: Update annotation layer
       parameters:
@@ -58,6 +66,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: putApiV1AnnotationLayerByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete annotation layer
       parameters:
@@ -71,6 +81,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: deleteApiV1AnnotationLayerByPk
+      x-operation-id-source: derived
   /api/v1/annotation_layer/{pk}/annotation/:
     get:
       summary: List annotations
@@ -85,6 +97,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: getApiV1AnnotationLayerByPkAnnotation
+      x-operation-id-source: derived
     post:
       summary: Create annotation
       parameters:
@@ -98,6 +112,8 @@ paths:
           description: Created
       tags:
       - Annotation Layer
+      operationId: postApiV1AnnotationLayerByPkAnnotation
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete annotations
       parameters:
@@ -111,6 +127,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: deleteApiV1AnnotationLayerByPkAnnotation
+      x-operation-id-source: derived
   /api/v1/annotation_layer/{pk}/annotation/{annotation_id}:
     get:
       summary: Get annotation
@@ -130,6 +148,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: getApiV1AnnotationLayerByPkAnnotationByAnnotationId
+      x-operation-id-source: derived
     put:
       summary: Update annotation
       parameters:
@@ -148,6 +168,8 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: putApiV1AnnotationLayerByPkAnnotationByAnnotationId
+      x-operation-id-source: derived
     delete:
       summary: Delete annotation
       parameters:
@@ -166,5 +188,7 @@ paths:
           description: OK
       tags:
       - Annotation Layer
+      operationId: deleteApiV1AnnotationLayerByPkAnnotationByAnnotationId
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

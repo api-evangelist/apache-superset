@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Theme API
+  title: Apache Superset REST Theme API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Theme
+      operationId: getApiV1Theme
+      x-operation-id-source: derived
     post:
       summary: Create theme
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Theme
+      operationId: postApiV1Theme
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete themes
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Theme
+      operationId: deleteApiV1Theme
+      x-operation-id-source: derived
   /api/v1/theme/{pk}:
     get:
       summary: Get theme
@@ -45,6 +51,8 @@ paths:
           description: OK
       tags:
       - Theme
+      operationId: getApiV1ThemeByPk
+      x-operation-id-source: derived
     put:
       summary: Update theme
       parameters:
@@ -58,6 +66,8 @@ paths:
           description: OK
       tags:
       - Theme
+      operationId: putApiV1ThemeByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete theme
       parameters:
@@ -71,5 +81,7 @@ paths:
           description: OK
       tags:
       - Theme
+      operationId: deleteApiV1ThemeByPk
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Css Template API
+  title: Apache Superset REST Css Template API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Css Template
+      operationId: getApiV1CssTemplate
+      x-operation-id-source: derived
     post:
       summary: Create CSS template
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Css Template
+      operationId: postApiV1CssTemplate
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete CSS templates
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Css Template
+      operationId: deleteApiV1CssTemplate
+      x-operation-id-source: derived
   /api/v1/css_template/{pk}:
     get:
       summary: Get CSS template
@@ -45,6 +51,8 @@ paths:
           description: OK
       tags:
       - Css Template
+      operationId: getApiV1CssTemplateByPk
+      x-operation-id-source: derived
     put:
       summary: Update CSS template
       parameters:
@@ -58,6 +66,8 @@ paths:
           description: OK
       tags:
       - Css Template
+      operationId: putApiV1CssTemplateByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete CSS template
       parameters:
@@ -71,5 +81,7 @@ paths:
           description: OK
       tags:
       - Css Template
+      operationId: deleteApiV1CssTemplateByPk
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

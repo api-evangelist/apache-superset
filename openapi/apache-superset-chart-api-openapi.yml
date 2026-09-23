@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Chart API
+  title: Apache Superset REST Chart API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: getApiV1Chart
+      x-operation-id-source: derived
     post:
       summary: Create chart
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Chart
+      operationId: postApiV1Chart
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete charts
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: deleteApiV1Chart
+      x-operation-id-source: derived
   /api/v1/chart/_info:
     get:
       summary: Chart schema info
@@ -39,6 +45,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: getApiV1ChartInfo
+      x-operation-id-source: derived
   /api/v1/chart/{id_or_uuid}:
     get:
       summary: Get chart
@@ -53,6 +61,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: getApiV1ChartByIdOrUuid
+      x-operation-id-source: derived
   /api/v1/chart/{pk}:
     put:
       summary: Update chart
@@ -67,6 +77,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: putApiV1ChartByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete chart
       parameters:
@@ -80,6 +92,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: deleteApiV1ChartByPk
+      x-operation-id-source: derived
   /api/v1/chart/{pk}/data/:
     get:
       summary: Get chart data
@@ -94,6 +108,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: getApiV1ChartByPkData
+      x-operation-id-source: derived
   /api/v1/chart/data:
     post:
       summary: Run chart data query
@@ -102,6 +118,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: postApiV1ChartData
+      x-operation-id-source: derived
   /api/v1/chart/data/{cache_key}:
     get:
       summary: Fetch cached chart data
@@ -116,6 +134,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: getApiV1ChartDataByCacheKey
+      x-operation-id-source: derived
   /api/v1/chart/export/:
     get:
       summary: Export charts
@@ -124,6 +144,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: getApiV1ChartExport
+      x-operation-id-source: derived
   /api/v1/chart/import/:
     post:
       summary: Import charts
@@ -132,6 +154,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: postApiV1ChartImport
+      x-operation-id-source: derived
   /api/v1/chart/{pk}/favorites/:
     post:
       summary: Favorite chart
@@ -146,6 +170,8 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: postApiV1ChartByPkFavorites
+      x-operation-id-source: derived
     delete:
       summary: Unfavorite chart
       parameters:
@@ -159,5 +185,7 @@ paths:
           description: OK
       tags:
       - Chart
+      operationId: deleteApiV1ChartByPkFavorites
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

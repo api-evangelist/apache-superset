@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Saved Query API
+  title: Apache Superset REST Saved Query API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Saved Query
+      operationId: getApiV1SavedQuery
+      x-operation-id-source: derived
     post:
       summary: Create saved query
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Saved Query
+      operationId: postApiV1SavedQuery
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete saved queries
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Saved Query
+      operationId: deleteApiV1SavedQuery
+      x-operation-id-source: derived
   /api/v1/saved_query/{pk}:
     get:
       summary: Get saved query
@@ -45,6 +51,8 @@ paths:
           description: OK
       tags:
       - Saved Query
+      operationId: getApiV1SavedQueryByPk
+      x-operation-id-source: derived
     put:
       summary: Update saved query
       parameters:
@@ -58,6 +66,8 @@ paths:
           description: OK
       tags:
       - Saved Query
+      operationId: putApiV1SavedQueryByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete saved query
       parameters:
@@ -71,5 +81,7 @@ paths:
           description: OK
       tags:
       - Saved Query
+      operationId: deleteApiV1SavedQueryByPk
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

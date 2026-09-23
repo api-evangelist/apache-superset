@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Dataset API
+  title: Apache Superset REST Dataset API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: getApiV1Dataset
+      x-operation-id-source: derived
     post:
       summary: Create dataset
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Dataset
+      operationId: postApiV1Dataset
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete datasets
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: deleteApiV1Dataset
+      x-operation-id-source: derived
   /api/v1/dataset/_info:
     get:
       summary: Dataset schema info
@@ -39,6 +45,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: getApiV1DatasetInfo
+      x-operation-id-source: derived
   /api/v1/dataset/{id_or_uuid}:
     get:
       summary: Get dataset
@@ -53,6 +61,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: getApiV1DatasetByIdOrUuid
+      x-operation-id-source: derived
   /api/v1/dataset/{pk}:
     put:
       summary: Update dataset
@@ -67,6 +77,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: putApiV1DatasetByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete dataset
       parameters:
@@ -80,6 +92,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: deleteApiV1DatasetByPk
+      x-operation-id-source: derived
   /api/v1/dataset/{pk}/refresh:
     put:
       summary: Refresh dataset metadata
@@ -94,6 +108,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: putApiV1DatasetByPkRefresh
+      x-operation-id-source: derived
   /api/v1/dataset/duplicate:
     post:
       summary: Duplicate dataset
@@ -102,6 +118,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: postApiV1DatasetDuplicate
+      x-operation-id-source: derived
   /api/v1/dataset/export/:
     get:
       summary: Export datasets
@@ -110,6 +128,8 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: getApiV1DatasetExport
+      x-operation-id-source: derived
   /api/v1/dataset/import/:
     post:
       summary: Import datasets
@@ -118,5 +138,7 @@ paths:
           description: OK
       tags:
       - Dataset
+      operationId: postApiV1DatasetImport
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

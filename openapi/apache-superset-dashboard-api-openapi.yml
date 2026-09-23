@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Dashboard API
+  title: Apache Superset REST Dashboard API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1Dashboard
+      x-operation-id-source: derived
     post:
       summary: Create dashboard
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Dashboard
+      operationId: postApiV1Dashboard
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete dashboards
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: deleteApiV1Dashboard
+      x-operation-id-source: derived
   /api/v1/dashboard/_info:
     get:
       summary: Dashboard schema info
@@ -39,6 +45,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardInfo
+      x-operation-id-source: derived
   /api/v1/dashboard/{id_or_slug}:
     get:
       summary: Get dashboard
@@ -53,6 +61,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardByIdOrSlug
+      x-operation-id-source: derived
   /api/v1/dashboard/{pk}:
     put:
       summary: Update dashboard
@@ -67,6 +77,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: putApiV1DashboardByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete dashboard
       parameters:
@@ -80,6 +92,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: deleteApiV1DashboardByPk
+      x-operation-id-source: derived
   /api/v1/dashboard/{id_or_slug}/charts:
     get:
       summary: List charts of a dashboard
@@ -94,6 +108,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardByIdOrSlugCharts
+      x-operation-id-source: derived
   /api/v1/dashboard/{id_or_slug}/datasets:
     get:
       summary: List datasets of a dashboard
@@ -108,6 +124,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardByIdOrSlugDatasets
+      x-operation-id-source: derived
   /api/v1/dashboard/{id_or_slug}/copy/:
     post:
       summary: Copy dashboard
@@ -122,6 +140,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: postApiV1DashboardByIdOrSlugCopy
+      x-operation-id-source: derived
   /api/v1/dashboard/{id_or_slug}/embedded:
     get:
       summary: Get embedded dashboard config
@@ -136,6 +156,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardByIdOrSlugEmbedded
+      x-operation-id-source: derived
     post:
       summary: Create embedded dashboard config
       parameters:
@@ -149,6 +171,8 @@ paths:
           description: Created
       tags:
       - Dashboard
+      operationId: postApiV1DashboardByIdOrSlugEmbedded
+      x-operation-id-source: derived
     put:
       summary: Update embedded dashboard config
       parameters:
@@ -162,6 +186,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: putApiV1DashboardByIdOrSlugEmbedded
+      x-operation-id-source: derived
     delete:
       summary: Delete embedded dashboard config
       parameters:
@@ -175,6 +201,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: deleteApiV1DashboardByIdOrSlugEmbedded
+      x-operation-id-source: derived
   /api/v1/dashboard/export/:
     get:
       summary: Export dashboards
@@ -183,6 +211,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardExport
+      x-operation-id-source: derived
   /api/v1/dashboard/import/:
     post:
       summary: Import dashboards
@@ -191,6 +221,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: postApiV1DashboardImport
+      x-operation-id-source: derived
   /api/v1/dashboard/favorite_status/:
     get:
       summary: Dashboard favorite status
@@ -199,6 +231,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardFavoriteStatus
+      x-operation-id-source: derived
   /api/v1/dashboard/{pk}/favorites/:
     post:
       summary: Favorite dashboard
@@ -213,6 +247,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: postApiV1DashboardByPkFavorites
+      x-operation-id-source: derived
     delete:
       summary: Unfavorite dashboard
       parameters:
@@ -226,6 +262,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: deleteApiV1DashboardByPkFavorites
+      x-operation-id-source: derived
   /api/v1/dashboard/{pk}/permalink:
     post:
       summary: Create dashboard permalink
@@ -240,6 +278,8 @@ paths:
           description: Created
       tags:
       - Dashboard
+      operationId: postApiV1DashboardByPkPermalink
+      x-operation-id-source: derived
   /api/v1/dashboard/permalink/{key}:
     get:
       summary: Resolve dashboard permalink
@@ -254,6 +294,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardPermalinkByKey
+      x-operation-id-source: derived
   /api/v1/dashboard/{pk}/filter_state:
     post:
       summary: Create filter state
@@ -268,6 +310,8 @@ paths:
           description: Created
       tags:
       - Dashboard
+      operationId: postApiV1DashboardByPkFilterState
+      x-operation-id-source: derived
   /api/v1/dashboard/{pk}/filter_state/{key}:
     get:
       summary: Get filter state
@@ -287,6 +331,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: getApiV1DashboardByPkFilterStateByKey
+      x-operation-id-source: derived
     put:
       summary: Update filter state
       parameters:
@@ -305,6 +351,8 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: putApiV1DashboardByPkFilterStateByKey
+      x-operation-id-source: derived
     delete:
       summary: Delete filter state
       parameters:
@@ -323,5 +371,7 @@ paths:
           description: OK
       tags:
       - Dashboard
+      operationId: deleteApiV1DashboardByPkFilterStateByKey
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

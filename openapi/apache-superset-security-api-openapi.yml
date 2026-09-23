@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Security API
+  title: Apache Superset REST Security API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityCsrfToken
+      x-operation-id-source: derived
   /api/v1/security/guest_token/:
     post:
       summary: Issue a guest token
@@ -25,6 +27,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: postApiV1SecurityGuestToken
+      x-operation-id-source: derived
   /api/v1/security/login:
     post:
       summary: Log in and obtain access token
@@ -33,6 +37,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: postApiV1SecurityLogin
+      x-operation-id-source: derived
   /api/v1/security/refresh:
     post:
       summary: Refresh access token
@@ -41,6 +47,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: postApiV1SecurityRefresh
+      x-operation-id-source: derived
   /api/v1/security/roles/:
     get:
       summary: List roles
@@ -49,6 +57,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityRoles
+      x-operation-id-source: derived
     post:
       summary: Create role
       responses:
@@ -56,6 +66,8 @@ paths:
           description: Created
       tags:
       - Security
+      operationId: postApiV1SecurityRoles
+      x-operation-id-source: derived
   /api/v1/security/roles/{pk}:
     get:
       summary: Get role
@@ -70,6 +82,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityRolesByPk
+      x-operation-id-source: derived
     put:
       summary: Update role
       parameters:
@@ -83,6 +97,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: putApiV1SecurityRolesByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete role
       parameters:
@@ -96,6 +112,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: deleteApiV1SecurityRolesByPk
+      x-operation-id-source: derived
   /api/v1/security/users/:
     get:
       summary: List users
@@ -104,6 +122,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityUsers
+      x-operation-id-source: derived
     post:
       summary: Create user
       responses:
@@ -111,6 +131,8 @@ paths:
           description: Created
       tags:
       - Security
+      operationId: postApiV1SecurityUsers
+      x-operation-id-source: derived
   /api/v1/security/users/{pk}:
     get:
       summary: Get user
@@ -125,6 +147,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityUsersByPk
+      x-operation-id-source: derived
     put:
       summary: Update user
       parameters:
@@ -138,6 +162,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: putApiV1SecurityUsersByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete user
       parameters:
@@ -151,6 +177,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: deleteApiV1SecurityUsersByPk
+      x-operation-id-source: derived
   /api/v1/security/permissions/:
     get:
       summary: List permissions
@@ -159,6 +187,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityPermissions
+      x-operation-id-source: derived
   /api/v1/security/groups/:
     get:
       summary: List security groups
@@ -167,6 +197,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityGroups
+      x-operation-id-source: derived
     post:
       summary: Create security group
       responses:
@@ -174,6 +206,8 @@ paths:
           description: Created
       tags:
       - Security
+      operationId: postApiV1SecurityGroups
+      x-operation-id-source: derived
   /api/v1/security/groups/{pk}:
     get:
       summary: Get security group
@@ -188,6 +222,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: getApiV1SecurityGroupsByPk
+      x-operation-id-source: derived
     put:
       summary: Update security group
       parameters:
@@ -201,6 +237,8 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: putApiV1SecurityGroupsByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete security group
       parameters:
@@ -214,5 +252,7 @@ paths:
           description: OK
       tags:
       - Security
+      operationId: deleteApiV1SecurityGroupsByPk
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08

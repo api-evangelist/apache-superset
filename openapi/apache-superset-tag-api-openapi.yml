@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Superset REST Annotation Layer Tag API
+  title: Apache Superset REST Tag API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Superset REST API covering authentication, dashboards, charts, datasets, databases, SQL Lab, queries, tags, themes, annotations, security (users/roles/permissions), reports, and assets.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Tag
+      operationId: getApiV1Tag
+      x-operation-id-source: derived
     post:
       summary: Create tag
       responses:
@@ -24,6 +26,8 @@ paths:
           description: Created
       tags:
       - Tag
+      operationId: postApiV1Tag
+      x-operation-id-source: derived
     delete:
       summary: Bulk delete tags
       responses:
@@ -31,6 +35,8 @@ paths:
           description: OK
       tags:
       - Tag
+      operationId: deleteApiV1Tag
+      x-operation-id-source: derived
   /api/v1/tag/{pk}:
     get:
       summary: Get tag
@@ -45,6 +51,8 @@ paths:
           description: OK
       tags:
       - Tag
+      operationId: getApiV1TagByPk
+      x-operation-id-source: derived
     put:
       summary: Update tag
       parameters:
@@ -58,6 +66,8 @@ paths:
           description: OK
       tags:
       - Tag
+      operationId: putApiV1TagByPk
+      x-operation-id-source: derived
     delete:
       summary: Delete tag
       parameters:
@@ -71,6 +81,8 @@ paths:
           description: OK
       tags:
       - Tag
+      operationId: deleteApiV1TagByPk
+      x-operation-id-source: derived
   /api/v1/tag/bulk_create:
     post:
       summary: Bulk create tags
@@ -79,5 +91,7 @@ paths:
           description: OK
       tags:
       - Tag
+      operationId: postApiV1TagBulkCreate
+      x-operation-id-source: derived
 x-generated-from: https://superset.apache.org/developer-docs/api
 x-generated-by: claude-crawl-2026-05-08
