@@ -44,7 +44,7 @@ tags:
   - Dashboards
   - Data Visualization
   - SQL
-  - Open-Source
+  - Open Source
 tags_raw:
   - Analytics
   - BI
@@ -52,6 +52,7 @@ tags_raw:
   - Data Visualization
   - SQL
   - Open Source
+  - Open-Source
 created: '2026-03-16'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-superset/refs/heads/main/apis.yml
