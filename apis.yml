@@ -338,6 +338,9 @@ apis:
   - type: APIReference
     url: https://superset.apache.org/docs/api
 common:
+  - type: CapabilityMap
+    url: capabilities/apache-superset-capability-edges.yml
+    name: Apache Superset Business Capability Map
   - type: Website
     url: https://www.apache.org/
   - type: IssueTracker

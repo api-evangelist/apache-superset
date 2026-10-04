@@ -1,0 +1,61 @@
+slug: apache-superset
+provider: Apache Superset
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 5
+edges:
+- tag: Dashboard
+  spec_file: apache-superset-dashboard-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.88
+  evidence: GET /api/v1/dashboard/ 'List dashboards' ... 'List charts of a dashboard'
+  reason: Dashboard lifecycle management on a data exploration/visualisation platform is reporting and
+    business intelligence delivery.
+- tag: Chart
+  spec_file: apache-superset-chart-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.85
+  evidence: POST /api/v1/chart/ 'Create chart' ... POST /api/v1/chart/data 'Run chart data query'
+  reason: Creating, querying and exporting data visualisations is the delivery of reporting/BI content,
+    matching Analytics & BI Management.
+- tag: Embedded Dashboard
+  spec_file: apache-superset-embedded-dashboard-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.75
+  evidence: GET /api/v1/embedded_dashboard/{uuid} 'Get embedded dashboard'
+  reason: Retrieval of an embeddable dashboard is distribution of BI content, though the single endpoint
+    is thin evidence.
+- tag: Security
+  spec_file: apache-superset-security-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.72
+  evidence: '''Log in and obtain access token'', ''List roles'', ''Create role'', ''Create user'', ''Issue
+    a guest token'''
+  reason: User, role and permission administration plus token issuance is identity and access management
+    for the application. Partly auth plumbing, so not maximal confidence.
+- tag: SQL Lab
+  spec_file: apache-superset-sql-lab-api-openapi.yml
+  capability_id: BC-610.50
+  capability_id_l1: BC-610
+  capability_name: Analytics & BI Management
+  confidence: 0.7
+  evidence: '''Execute SQL'', ''Fetch SQL results'', ''Export SQL Lab results'''
+  reason: Ad-hoc SQL querying and result export is the analytic exploration surface of a BI platform,
+    mapping to Analytics & BI Management.
