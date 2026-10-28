@@ -1,4 +1,4 @@
-# Apache Superset (apache-superset)
+# Apache Superset
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,68 +66,159 @@
 
 Apache Superset is a modern data exploration and visualization platform designed to be visual, intuitive, and interactive. It provides a rich set of data visualizations, a no-code chart builder, and a SQL editor with support for most SQL-speaking databases. Superset exposes a comprehensive REST API for programmatic access to dashboards, charts, datasets, databases, and user management. It is an Apache Software Foundation top-level project.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-superset/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-superset/refs/heads/main/apis.yml)
+**Areas:** Analytics · Business Intelligence · Dashboards · Data Visualization · SQL · Open Source
 
-## Scope
+## Apache Superset on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Apache Superset is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-superset/](https://apis.io/providers/apache-superset/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (21)
 
-- Analytics
-- BI
-- Dashboard
-- Data Visualization
-- SQL
-- Open Source
+- [Apache Superset Annotation Layer API](https://apis.io/apis/apache-superset/apache-superset-annotation-layer-api/) — The Annotation Layer API from Apache Superset — 4 operation(s) for annotation layer.
+- [Apache Superset Assets API](https://apis.io/apis/apache-superset/apache-superset-assets-api/) — The Assets API from Apache Superset — 2 operation(s) for assets.
+- [Apache Superset Async Event API](https://apis.io/apis/apache-superset/apache-superset-async-event-api/) — The Async Event API from Apache Superset — 1 operation(s) for async event.
+- [Apache Superset Available Domains API](https://apis.io/apis/apache-superset/apache-superset-available-domains-api/) — The Available Domains API from Apache Superset — 1 operation(s) for available domains.
+- [Apache Superset Cachekey API](https://apis.io/apis/apache-superset/apache-superset-cachekey-api/) — The Cachekey API from Apache Superset — 1 operation(s) for cachekey.
+- [Apache Superset Chart API](https://apis.io/apis/apache-superset/apache-superset-chart-api/) — The Chart API from Apache Superset — 10 operation(s) for chart.
+- [Apache Superset Css Template API](https://apis.io/apis/apache-superset/apache-superset-css-template-api/) — The Css Template API from Apache Superset — 2 operation(s) for css template.
+- [Apache Superset Dashboard API](https://apis.io/apis/apache-superset/apache-superset-dashboard-api/) — The Dashboard API from Apache Superset — 16 operation(s) for dashboard.
+- [Apache Superset Database API](https://apis.io/apis/apache-superset/apache-superset-database-api/) — The Database API from Apache Superset — 8 operation(s) for database.
+- [Apache Superset Dataset API](https://apis.io/apis/apache-superset/apache-superset-dataset-api/) — The Dataset API from Apache Superset — 8 operation(s) for dataset.
+- [Apache Superset Embedded Dashboard API](https://apis.io/apis/apache-superset/apache-superset-embedded-dashboard-api/) — The Embedded Dashboard API from Apache Superset — 1 operation(s) for embedded dashboard.
+- [Apache Superset Log API](https://apis.io/apis/apache-superset/apache-superset-log-api/) — The Log API from Apache Superset — 2 operation(s) for log.
+- [Apache Superset Me API](https://apis.io/apis/apache-superset/apache-superset-me-api/) — The Me API from Apache Superset — 2 operation(s) for me.
+- [Apache Superset Menu API](https://apis.io/apis/apache-superset/apache-superset-menu-api/) — The Menu API from Apache Superset — 1 operation(s) for menu.
+- [Apache Superset Query API](https://apis.io/apis/apache-superset/apache-superset-query-api/) — The Query API from Apache Superset — 3 operation(s) for query.
+- [Apache Superset Report API](https://apis.io/apis/apache-superset/apache-superset-report-api/) — The Report API from Apache Superset — 2 operation(s) for report.
+- [Apache Superset Saved Query API](https://apis.io/apis/apache-superset/apache-superset-saved-query-api/) — The Saved Query API from Apache Superset — 2 operation(s) for saved query.
+- [Apache Superset Security API](https://apis.io/apis/apache-superset/apache-superset-security-api/) — The Security API from Apache Superset — 11 operation(s) for security.
+- [Apache Superset Tag API](https://apis.io/apis/apache-superset/apache-superset-tag-api/) — The Tag API from Apache Superset — 3 operation(s) for tag.
+- [Apache Superset Theme API](https://apis.io/apis/apache-superset/apache-superset-theme-api/) — The Theme API from Apache Superset — 2 operation(s) for theme.
+- [Apache Superset SQL Lab API](https://apis.io/apis/apache-superset/apache-superset-sql-lab-api/) — The SQL Lab API from Apache Superset — 6 operation(s) for sql lab.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Apache Superset REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Superset REST API v1 provides programmatic access to all Superset resources including dashboards (28 endpoints), charts (20 endpoints), datasets (19 endpoints), databases (30 endpoints), SQL Lab queries (7 endpoints), saved queries (17 endpoints), tags, annotation layers, CSS templates, themes, row-level security, and user management. Authentication uses JWT Bearer tokens obtained via POST /api/v1/security/login.
+- [Apache Superset Agentic Access](https://apis.io/agentic-access/apache-superset/apache-superset-agentic-access/)
 
-- **Human URL:** [https://superset.apache.org/developer-docs/api](https://superset.apache.org/developer-docs/api)
+#### Collections (22)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- REST
-- Dashboards
-- Charts
-- Datasets
-- SQL
-- Analytics
+- [Apache Superset REST API](https://apis.io/collections/apache-superset/open-apache-superset/)
+- [Apache Superset REST Annotation Layer API](https://apis.io/collections/apache-superset/open-apache-superset-annotation-layer-api/)
+- [Apache Superset REST Annotation Layer Assets API](https://apis.io/collections/apache-superset/open-apache-superset-assets-api/)
+- [Apache Superset REST Annotation Layer Async Event API](https://apis.io/collections/apache-superset/open-apache-superset-async-event-api/)
+- [Apache Superset REST Annotation Layer Available Domains API](https://apis.io/collections/apache-superset/open-apache-superset-available-domains-api/)
+- [Apache Superset REST Annotation Layer Cachekey API](https://apis.io/collections/apache-superset/open-apache-superset-cachekey-api/)
+- [Apache Superset REST Annotation Layer Chart API](https://apis.io/collections/apache-superset/open-apache-superset-chart-api/)
+- [Apache Superset REST Annotation Layer Css Template API](https://apis.io/collections/apache-superset/open-apache-superset-css-template-api/)
+- [Apache Superset REST Annotation Layer Dashboard API](https://apis.io/collections/apache-superset/open-apache-superset-dashboard-api/)
+- [Apache Superset REST Annotation Layer Database API](https://apis.io/collections/apache-superset/open-apache-superset-database-api/)
+- [Apache Superset REST Annotation Layer Dataset API](https://apis.io/collections/apache-superset/open-apache-superset-dataset-api/)
+- [Apache Superset REST Annotation Layer Embedded Dashboard API](https://apis.io/collections/apache-superset/open-apache-superset-embedded-dashboard-api/)
+- [Apache Superset REST Annotation Layer Log API](https://apis.io/collections/apache-superset/open-apache-superset-log-api/)
+- [Apache Superset REST Annotation Layer Me API](https://apis.io/collections/apache-superset/open-apache-superset-me-api/)
+- [Apache Superset REST Annotation Layer Menu API](https://apis.io/collections/apache-superset/open-apache-superset-menu-api/)
+- [Apache Superset REST Annotation Layer Query API](https://apis.io/collections/apache-superset/open-apache-superset-query-api/)
+- [Apache Superset REST Annotation Layer Report API](https://apis.io/collections/apache-superset/open-apache-superset-report-api/)
+- [Apache Superset REST Annotation Layer Saved Query API](https://apis.io/collections/apache-superset/open-apache-superset-saved-query-api/)
+- [Apache Superset REST Annotation Layer Security API](https://apis.io/collections/apache-superset/open-apache-superset-security-api/)
+- [Apache Superset REST Annotation Layer Sqllab API](https://apis.io/collections/apache-superset/open-apache-superset-sqllab-api/)
+- [Apache Superset REST Annotation Layer Tag API](https://apis.io/collections/apache-superset/open-apache-superset-tag-api/)
+- [Apache Superset REST Annotation Layer Theme API](https://apis.io/collections/apache-superset/open-apache-superset-theme-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://superset.apache.org/developer-docs/api)
-- [API Reference](https://superset.apache.org/docs/api)
-- [OpenAPI](openapi/apache-superset-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/apache-superset.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-superset.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Apache Superset Domain Security](https://apis.io/security/apache-superset/apache-superset-domain-security/)
+- [Apache Superset Vulnerability Disclosure](https://apis.io/security/apache-superset/apache-superset-vulnerability-disclosure/)
 
-- [GitHub Repository](https://github.com/apache/superset)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Superset Plans Pricing](https://apis.io/plans/apache-superset/apache-superset-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Superset Rate Limits](https://apis.io/rate-limits/apache-superset/apache-superset-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Superset Finops](https://apis.io/finops/apache-superset/apache-superset-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://superset.apache.org/docs/intro)
-- [Portal](https://superset.apache.org/)
-- [Getting Started](https://superset.apache.org/docs/quickstart)
-- [Release Notes](https://github.com/apache/superset/releases)
+- [Getting started](https://superset.apache.org/docs/quickstart)
 - [Support](https://github.com/apache/superset/discussions)
-- [Terms of Service](https://www.apache.org/licenses/)
-- [SDK](https://pypi.org/project/apache-superset/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Terms of service](https://www.apache.org/licenses/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 40.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 37.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 18.4 |
+
+**Agent readiness 17.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-superset/](https://apis.io/providers/apache-superset/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Superset: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-superset/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
